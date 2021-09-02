@@ -1,0 +1,124 @@
+BBXft.dpi:                     96
+Xft.antialias:                 true
+Xft.hinting:                   true
+Xft.hintstyle:                 hintslight
+Xft.rgba:                      rgb
+Xft.lcdfilter:                 lcddefault
+xcalendar*firstDay:            1
+xcalendar*markHoliday:         false
+!
+!-----------------------------------------------------------------------------
+!	X T E R M - Setting
+!
+XTerm*cursorColor:                      darkorange1
+XTerm*scrollBar:                        false
+XTterm*utf8:                            2
+XTerm*termName:                         xterm-256color
+XTerm*faceName:                         xft:Monospace:pixelsize=13
+XTerm.VT100.geometry:                   89x29
+XTerm*saveLines:                        7777
+XTerm*metaSendsEscape:                  true
+XTerm*highlightSelection:               true
+XTerm*trimSelection:                    true
+XTerm*cutNewline:                       false
+XTerm*colorBDMode:                      true
+XTerm*colorBD:                          khaki
+XTerm*charClass: 3:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+!
+!-----------------------------------------------------------------------------
+!	U R X V T - Setting
+!
+URxvt*scrollBar:                       false
+URxvt*saveLines:                       7777
+URxvt*cursorBlink:                     false
+URxvt*termName:                        rxvt-256color
+URxvt*font:                            xft:Monospace:pixelsize=13
+URxvt*boldFont:                        xft:Monospace:pixelsize=13
+URxvt*colorBD:                         orange
+URxvt.transparent:                     true
+URxvt.shading:                         50
+URxvt.cutchars:                        ()*,<>[]{}|`""''
+URxvt.perl-ext-common:                 matcher
+URxvt.urlLauncher:                     sensible-browser
+URxvt*iso14755_52:                     false
+URxvt*matcher.pattern.1:               \\bhttps?:\/\/(www.youtube|youtube).com\/watch\\?v=([\\w-]*)|vimeo.com\/([\\w-]*)
+URxvt*matcher.launcher.1:              mtube $0
+URxvt*matcher.pattern.2:               \\bhttps?:\/\/[\\w-.]*\/[\\w./?&@#-]*.(jpg|jpeg|png)
+URxvt*matcher.launcher.2:              feh $0
+
+!-------------------------------------------------------------------------------
+! Colors
+
+*background: #181818
+*foreground: #c0c0c0
+*cursorColor: #93a1a1
+
+!! black dark/light
+*color0: #121212
+*color8: #2e3436
+
+!! red dark/light
+*color1: #a35b66
+*color9: #ab6b74
+
+!! green dark/light
+*color2: #99ab6f
+*color10: #acb972
+
+!! yellow dark/light
+*color3: #ca9733
+*color11: #ccaa69
+
+!! blue dark/light
+*color4: #495d6e
+*color12: #687987
+
+!! magenta dark/light
+*color5: #825969
+*color13: #977381
+
+!! cyan dark/light
+*color6: #839191
+*color14: #98a4a4
+
+!! white dark/light
+*color7: #e0e0e0
+color15: #e5e5e5
+!
+!-----------------------------------------------------------------------------
+!	X C A L C - Setting
+!
+xcalc*geometry: 200x275
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
+!
+!-----------------------------------------------------------------------------
+!	X M E S S A G E - Setting
+!
+Xmessage.form.okay.shapeStyle:         rectangle
+Xmessage*defaultButton:                okay
+Xmessage.form.message.Scroll:          WhenNeeded
+Xmessage*borderWidth:                  0
+Xmessage*Text.borderWidth:             0
+Xmessage*Command.shapeStyle:           rectangle
+
+
+!-----------------------------------------------------------------------------
+!	X F O N T S E L - Setting
+!
+XFontSel*menu*showUnselectable: false
+XFontSel*MenuButton.shadowWidth: 0
+XFontsel*Toggle*ToggleStyle: check
+XFontsel*MenuButton*Justify:    left
+XFontsel*MenuButton*MenuButtonStyle: select
+.xfontsel.pane.fieldBox.MenuButton.borderWidth: 1
+.xfontsel.pane.fieldBox.MenuButton.internalHeight: 1
+.xfontsel.pane.fieldBox.MenuButton.internalWidth: 2
+.xfontsel.pane.fieldBox.MenuButton.shapeStyle: rectangle
+!
+!-----------------------------------------------------------------------------
+!	X C O L O R S E L - Setting
+!
+xcolorsel.geometry:                     399x595
+xcolorsel*displayFormat:                #rrggbb
+xcolorsel*maxRows:                      99

@@ -1,0 +1,83 @@
+conky.config = {
+  own_window = true,
+  own_window_transparent = true,
+  own_window_type = 'normal',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_argb_visual = true,
+  own_window_argb_value = 0,
+  out_to_console = false,
+  use_xft = true,
+  font = 'Cantarell:size=11',
+  update_interval = 2,
+  cpu_avg_samples = 2,
+  net_avg_samples = 2,
+  double_buffer = true,
+  maximum_width = 320,
+  draw_shades = false,
+  draw_outline = false,
+  draw_borders = false,
+  stippled_borders = 1,
+  border_width = 10,
+  default_color = '#F5F5F5',
+  default_shade_color = 'grey',
+  default_outline_color = 'grey',
+  alignment = 'bottom_right',
+  gap_x = 0,
+  gap_y = 100,
+  use_spacer = 'left',
+  no_buffers = true,
+  uppercase = false
+}
+
+conky.text = [[
+  ${alignc}${color}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
+  ${alignc}${color #000000}${cpugraph 13,318 000000 FFEF00}
+  ${color lightgrey}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color lightgrey}| ${color lightgrey}CPU Temperature: ${color}${hwmon temp 1}°C
+
+  ${color lightgrey} C1: ${color}${cpu cpu1}% ${color lightgrey}@ ${color}${freq 1} MHz${color #FFEF00}${alignr}${color lightgrey}C2: ${color}${cpu cpu2}% ${color lightgrey}@ ${color}${freq 2} MHz   
+  ${color #FFEF00}${cpubar cpu1 6,150}${alignr}${color #FFEF00}${cpubar cpu2 6,150}
+  ${color lightgrey} C3: ${color}${cpu cpu3}% ${color lightgrey}@ ${color}${freq 3} MHz${color #FFEF00}${alignr}${color lightgrey}C4: ${color}${cpu cpu4}% ${color lightgrey}@ ${color}${freq 4} MHz   
+  ${color #FFEF00}${cpubar cpu3 6,150}${alignr}${color #FFEF00}${cpubar cpu4 6,150}
+  ${color lightgrey} C5: ${color}${cpu cpu5}% ${color lightgrey}@ ${color}${freq 5} MHz${color #FFEF00}${alignr}${color lightgrey}C6: ${color}${cpu cpu6}% ${color lightgrey}@ ${color}${freq 6} MHz   
+  ${color #FFEF00}${cpubar cpu5 6,150}${alignr}${color #FFEF00}${cpubar cpu6 6,150}
+  ${color lightgrey} C7: ${color}${cpu cpu7}% ${color lightgrey}@ ${color}${freq 7} MHz${color #FFEF00}${alignr}${color lightgrey}C8: ${color}${cpu cpu8}% ${color lightgrey}@ ${color}${freq 8} MHz   
+  ${color #FFEF00}${cpubar cpu7 6,150}${alignr}${color #FFEF00}${cpubar cpu8 6,150}
+  ${color #656565}$stippled_hr$color
+
+  ${color lightgrey}Ram  ${alignc}               ${color}$mem${color lightgrey} / ${color}$memmax ${alignr}${memperc}% Used
+  ${color #FFEF00}${membar 6,318}
+  ${color lightgrey}Swap ${alignc}                 ${color}${swap}${color lightgrey} / ${color}${swapmax} ${alignr}${swapperc}% Used
+  ${color #FFEF00}${swapbar 6,318}
+  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used}${color lightgrey} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
+  ${color #FFEF00}${fs_bar 6,318 /}
+  ${color lightgrey}Disk Read IO: $color${diskio_read}${alignr}${color lightgrey}Disk Write IO: ${color}${diskio_write}
+  ${color #000000}${diskiograph_read 12,145 000000 FFEF00}${alignr}${color #000000}${diskiograph_write 12,145 000000 FFEF00}
+  ${color lightgrey}Processes: ${color}$running_processes${color lightgrey} / ${color}$processes${alignr}${color lightgrey}Threads: ${color}$running_threads${color lightgrey} / ${color}$threads
+  ${color #656565}$stippled_hr$color
+  ${color lightgrey} Top CPU${alignr}CPU 
+  ${color}${top name 1}$alignr${top cpu 1}%
+  ${color}${top name 2}$alignr${top cpu 2}%
+  ${color}${top name 3}$alignr${top cpu 3}%
+  ${color}${top name 4}$alignr${top cpu 4}%
+  ${color}${top name 5}$alignr${top cpu 5}%
+  ${color}${top name 6}$alignr${top cpu 6}%
+  ${color}${top name 7}$alignr${top cpu 7}%
+  ${color}${top name 8}$alignr${top cpu 8}%
+  ${color}${top name 9}$alignr${top cpu 9}%
+  ${color}${top name 10}$alignr${top cpu 10}%
+  ${color #656565}$stippled_hr$color
+  ${color lightgrey} Top Memory${alignr}Memory    CPU 
+  ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
+  ${color}${top_mem name 2}${alignr}${top_mem mem_res 2}$alignr${top_mem cpu 2}%
+  ${color}${top_mem name 3}${alignr}${top_mem mem_res 3}$alignr${top_mem cpu 3}%
+  ${color}${top_mem name 4}${alignr}${top_mem mem_res 4}$alignr${top_mem cpu 4}%
+  ${color}${top_mem name 5}${alignr}${top_mem mem_res 5}$alignr${top_mem cpu 5}%
+  ${color}${top_mem name 6}${alignr}${top_mem mem_res 6}$alignr${top_mem cpu 6}%
+  ${color}${top_mem name 7}${alignr}${top_mem mem_res 7}$alignr${top_mem cpu 7}%
+  ${color}${top_mem name 8}${alignr}${top_mem mem_res 8}$alignr${top_mem cpu 8}%
+  ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
+  ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
+  ${color #656565}$stippled_hr$color
+
+  ${color}${kernel}$alignr${color}uptime ${uptime_short}
+]]

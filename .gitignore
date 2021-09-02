@@ -1,0 +1,17 @@
+# ignore everything
+*
+
+# general
+!.cvsrc
+!.gitignore
+!README.md
+
+# X
+!.Xresources
+!.conkyrc
+
+# shell
+!.tmux.conf
+!.zshrc
+!.zsh/
+!.zsh/*
