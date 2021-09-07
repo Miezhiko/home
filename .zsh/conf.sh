@@ -23,22 +23,22 @@ autoload -U zargs
 }
 
 termtitle() {
-	case "$TERM" in
-		rxvt*|xterm|gnome-terminal|tmux)
-			case "$1" in
-				precmd)
-					print -Pn "\e]0;%n@%m: %~\a"
-				;;
-				preexec)
-					zsh_cmd_title="$2"
-					zsh_cmd_title="${zsh_cmd_title//\\/\\\\}"
-					zsh_cmd_title="${zsh_cmd_title//\$/\\\\\$}"
-					zsh_cmd_title="${zsh_cmd_title//\%/<percent>}"
-					print -Pn "\e]0;${zsh_cmd_title} [%n@%m: %~]\a"
-				;;
-			esac
-		;;
-	esac
+  case "$TERM" in
+    rxvt*|xterm|gnome-terminal|tmux)
+      case "$1" in
+        precmd)
+          print -Pn "\e]0;%n@%m: %~\a"
+        ;;
+        preexec)
+          zsh_cmd_title="$2"
+          zsh_cmd_title="${zsh_cmd_title//\\/\\\\}"
+          zsh_cmd_title="${zsh_cmd_title//\$/\\\\\$}"
+          zsh_cmd_title="${zsh_cmd_title//\%/<percent>}"
+          print -Pn "\e]0;${zsh_cmd_title} [%n@%m: %~]\a"
+        ;;
+      esac
+    ;;
+  esac
 }
 
 # Completion.
@@ -62,7 +62,7 @@ export LS_COLORS='no=00;35:fi=00;35:di=01;34:ln=04;36:pi=30:so=01;35:do=01;35:bd
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ "$USER" = 'root' ] && [ "$(cut -d ' ' -f 19 /proc/$$/stat)" -gt 0 ]; then
-	renice -n 0 -p "$$" && echo "# Adjusted nice level for current shell to 0."
+  renice -n 0 -p "$$" && echo "# Adjusted nice level for current shell to 0."
 fi
 
 build_prompt() {
@@ -99,13 +99,13 @@ build_prompt() {
   else
     PROMPT=""
   fi
-  PROMPT+="%{$reset_color%}%{$fg_bold[grey]%}λ %{$reset_color%}"
+  PROMPT+="%{$reset_color%}%{$fg_bold[default]%}λ %{$reset_color%}"
 }
 
 [[ -z $precmd_functions ]] && precmd_functions=()
 precmd_functions=($precmd_functions build_prompt)
 
-RPROMPT="%{$fg[cyan]%}%n%{$fg[grey]%}⋆%{%(#~$fg_bold[blue]~$fg_bold[magenta])%}%m %{$fg_bold[grey]%}%~/ %{$reset_color%}% %(?,%{$fg[green]%}Π%{$reset_color%},%{$fg[red]%}∅%{$reset_color%}"
+RPROMPT="%{$fg[cyan]%}%n%{$fg[default]%}⋆%{%(#~$fg_bold[blue]~$fg_bold[magenta])%}%m %{$fg_bold[default]%}%~/ %{$reset_color%}% %(?,%{$fg[green]%}Π%{$reset_color%},%{$fg_bold[red]%}∅%{$reset_color%}"
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
