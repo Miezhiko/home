@@ -35,3 +35,9 @@ wupgrade() {
 wclean() {
   emerge --depclean
 }
+
+GOAWAYFROMSWAPYOUASSHOLES() {
+  swapoff -a
+  swapon -a
+  free
+}
