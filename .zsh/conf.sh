@@ -99,7 +99,11 @@ build_prompt() {
   else
     PROMPT=""
   fi
-  PROMPT+="%{$reset_color%}%{$fg_bold[default]%}λ %{$reset_color%}"
+  if [ "$USER" = 'root' ]; then
+    PROMPT+="%{$reset_color%}%{$fg_bold[red]%}λ %{$reset_color%}"
+  else
+    PROMPT+="%{$reset_color%}%{$fg_bold[default]%}λ %{$reset_color%}"
+  fi
 }
 
 [[ -z $precmd_functions ]] && precmd_functions=()
