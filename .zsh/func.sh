@@ -4,7 +4,7 @@ reload () { exec "${SHELL}" "$@" }
 _calc() { echo "${1}"|bc -l; }
 
 unpack () {
-   if [ -f $1 ] ; then
+   if [[ -f $1 ]] ; then
      case $1 in
        *.tar.bz2) tar xjf $1  ;;
        *.tar.gz)  tar xzf $1  ;;
@@ -26,7 +26,7 @@ unpack () {
 }
 
 pack () {
-  if [ $1 ] ; then
+  if [[ $1 ]] ; then
     case $1 in
       tbz)   tar cjvf $2.tar.bz2 $2   ;;
       tgz)   tar czvf $2.tar.gz  $2   ;;
