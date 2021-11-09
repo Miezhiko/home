@@ -14,6 +14,7 @@ setopt hist_ignore_space
 setopt noflowcontrol
 
 setopt extendedGlob
+setopt NO_NOMATCH
 autoload -U zmv
 autoload -U zargs
 
