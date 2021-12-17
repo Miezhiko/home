@@ -29,7 +29,8 @@ alias ды='ls --color=auto --human-readable --group-directories-first --classif
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 
 #editors
-alias n='nano'
+alias nano='nano --zero'
+alias n='nano --zero'
 alias g='gedit "$@" 2>/dev/null'
 
 #because of zsh...
