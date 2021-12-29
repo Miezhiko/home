@@ -41,3 +41,11 @@ pack () {
     echo "'$1' is not a valid file"
   fi
 }
+
+kill-port() {
+  if [[ $1 ]] ; then
+    lsof -i :$1 | grep 'TCP' | awk '{print $2}' | xargs kill -9
+  else
+    echo "'$1' is not a valid port"
+  fi
+}
