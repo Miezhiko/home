@@ -11,7 +11,6 @@ alias cls="clear"
 
 # Default commands args
 alias du='du -sh'
-alias cat='bat'
 
 alias chmod="chmod -c"
 alias chown="chown -c"
