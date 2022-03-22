@@ -30,7 +30,7 @@ alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 #editors
 alias nano='nano --zero'
 alias n='nano --zero'
-alias g='gedit "$@" 2>/dev/null'
+alias g='gnome-text-editor "$@" 2>/dev/null'
 
 #because of zsh...
 alias calc='noglob _calc'
