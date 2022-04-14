@@ -120,3 +120,4 @@ export EDITOR="nano"
 export LD_LIBRARY_PATH=/usr/local/lib64
 export force_3tc_enable=true
 export NODE_PATH=/usr/lib64/node_modules
+export NO_AT_BRIDGE=1
