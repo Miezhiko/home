@@ -24,8 +24,8 @@ fi
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 
-alias ды='ls --color=auto --human-readable --group-directories-first --classify'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias ды='ls'
 
 #editors
 alias nano='nano --zero'
