@@ -37,7 +37,7 @@ autoload -U zargs
     else
       zstyle -s ":zim:termtitle:${zhook}" format 'termtitle_format' || \
           zstyle -s ':zim:termtitle' format 'termtitle_format' || \
-          termtitle_format='%n@%m: %~'
+          termtitle_format='%~'
       case ${TERM} in
         screen)
           builtin eval "termtitle_update_${zhook}() { print -Pn '\Ek'${(qq)termtitle_format}'\E\\' }"
