@@ -31,27 +31,27 @@ conky.config = {
 
 conky.text = [[
   ${alignc}${color}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
-  ${alignc}${color #000000}${cpugraph 13,318 000000 FFEF00}
+  ${alignc}${color #000000}${cpugraph 13,318 000000 FF3333}
   ${color lightgrey}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color lightgrey}| ${color lightgrey}CPU Temperature: ${color}${hwmon temp 1}°C
 
-  ${color lightgrey} C1: ${color}${cpu cpu1}% ${color lightgrey}@ ${color}${freq 1} MHz${color #FFEF00}${alignr}${color lightgrey}C2: ${color}${cpu cpu2}% ${color lightgrey}@ ${color}${freq 2} MHz   
-  ${color #FFEF00}${cpubar cpu1 6,150}${alignr}${color #FFEF00}${cpubar cpu2 6,150}
-  ${color lightgrey} C3: ${color}${cpu cpu3}% ${color lightgrey}@ ${color}${freq 3} MHz${color #FFEF00}${alignr}${color lightgrey}C4: ${color}${cpu cpu4}% ${color lightgrey}@ ${color}${freq 4} MHz   
-  ${color #FFEF00}${cpubar cpu3 6,150}${alignr}${color #FFEF00}${cpubar cpu4 6,150}
-  ${color lightgrey} C5: ${color}${cpu cpu5}% ${color lightgrey}@ ${color}${freq 5} MHz${color #FFEF00}${alignr}${color lightgrey}C6: ${color}${cpu cpu6}% ${color lightgrey}@ ${color}${freq 6} MHz   
-  ${color #FFEF00}${cpubar cpu5 6,150}${alignr}${color #FFEF00}${cpubar cpu6 6,150}
-  ${color lightgrey} C7: ${color}${cpu cpu7}% ${color lightgrey}@ ${color}${freq 7} MHz${color #FFEF00}${alignr}${color lightgrey}C8: ${color}${cpu cpu8}% ${color lightgrey}@ ${color}${freq 8} MHz   
-  ${color #FFEF00}${cpubar cpu7 6,150}${alignr}${color #FFEF00}${cpubar cpu8 6,150}
+  ${color lightgrey} C1: ${color}${cpu cpu1}% ${color lightgrey}@ ${color}${freq 1} MHz${color #FF3333}${alignr}${color lightgrey}C2: ${color}${cpu cpu2}% ${color lightgrey}@ ${color}${freq 2} MHz   
+  ${color #FF3333}${cpubar cpu1 6,150}${alignr}${color #FF3333}${cpubar cpu2 6,150}
+  ${color lightgrey} C3: ${color}${cpu cpu3}% ${color lightgrey}@ ${color}${freq 3} MHz${color #FF3333}${alignr}${color lightgrey}C4: ${color}${cpu cpu4}% ${color lightgrey}@ ${color}${freq 4} MHz   
+  ${color #FF3333}${cpubar cpu3 6,150}${alignr}${color #FF3333}${cpubar cpu4 6,150}
+  ${color lightgrey} C5: ${color}${cpu cpu5}% ${color lightgrey}@ ${color}${freq 5} MHz${color #FF3333}${alignr}${color lightgrey}C6: ${color}${cpu cpu6}% ${color lightgrey}@ ${color}${freq 6} MHz   
+  ${color #FF3333}${cpubar cpu5 6,150}${alignr}${color #FF3333}${cpubar cpu6 6,150}
+  ${color lightgrey} C7: ${color}${cpu cpu7}% ${color lightgrey}@ ${color}${freq 7} MHz${color #FF3333}${alignr}${color lightgrey}C8: ${color}${cpu cpu8}% ${color lightgrey}@ ${color}${freq 8} MHz   
+  ${color #FF3333}${cpubar cpu7 6,150}${alignr}${color #FF3333}${cpubar cpu8 6,150}
   ${color #656565}$stippled_hr$color
 
   ${color lightgrey}Ram  ${alignc}               ${color}$mem${color lightgrey} / ${color}$memmax ${alignr}${memperc}% Used
-  ${color #FFEF00}${membar 6,318}
+  ${color #FF3333}${membar 6,318}
   ${color lightgrey}Swap ${alignc}                 ${color}${swap}${color lightgrey} / ${color}${swapmax} ${alignr}${swapperc}% Used
-  ${color #FFEF00}${swapbar 6,318}
+  ${color #FF3333}${swapbar 6,318}
   ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used}${color lightgrey} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
-  ${color #FFEF00}${fs_bar 6,318 /}
+  ${color #FF3333}${fs_bar 6,318 /}
   ${color lightgrey}Disk Read IO: $color${diskio_read}${alignr}${color lightgrey}Disk Write IO: ${color}${diskio_write}
-  ${color #000000}${diskiograph_read 12,145 000000 FFEF00}${alignr}${color #000000}${diskiograph_write 12,145 000000 FFEF00}
+  ${color #000000}${diskiograph_read 12,145 000000 FF3333}${alignr}${color #000000}${diskiograph_write 12,145 000000 FF3333}
   ${color lightgrey}Processes: ${color}$running_processes${color lightgrey} / ${color}$processes${alignr}${color lightgrey}Threads: ${color}$running_threads${color lightgrey} / ${color}$threads
   ${color #656565}$stippled_hr$color
   ${color lightgrey} Top CPU${alignr}CPU 
@@ -59,12 +59,11 @@ conky.text = [[
   ${color}${top name 2}$alignr${top cpu 2}%
   ${color}${top name 3}$alignr${top cpu 3}%
   ${color}${top name 4}$alignr${top cpu 4}%
-  ${color}${top name 5}$alignr${top cpu 5}%
-  ${color}${top name 6}$alignr${top cpu 6}%
-  ${color}${top name 7}$alignr${top cpu 7}%
-  ${color}${top name 8}$alignr${top cpu 8}%
-  ${color}${top name 9}$alignr${top cpu 9}%
-  ${color}${top name 10}$alignr${top cpu 10}%
+  ${color}${top name 5}$alignr${top cpu 6}%
+  ${color}${top name 5}$alignr${top cpu 7}%
+  ${color}${top name 5}$alignr${top cpu 8}%
+  ${color}${top name 5}$alignr${top cpu 9}%
+  ${color}${top name 5}$alignr${top cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color lightgrey} Top Memory${alignr}Memory    CPU 
   ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
@@ -77,7 +76,12 @@ conky.text = [[
   ${color}${top_mem name 8}${alignr}${top_mem mem_res 8}$alignr${top_mem cpu 8}%
   ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
   ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
-  ${color #656565}$stippled_hr$color
+
+  ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
+  ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown eth0}${alignr}${downspeed eth0}
+  ${voffset 0}N${color3}${offset 5}Upload${goto 120}${totalup eth0}${alignr}${upspeed eth0}
+  ${voffset 4}${color6}a${color3}${offset 5}Private${offset 3}IP${goto 123}LAN${alignr}${addr eth0}
+  ${voffset 0}${color6}a${color3}${offset 5}Public${offset 7}IP${goto 121}WAN${alignr}${execi 1800 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
 
   ${color}${kernel}$alignr${color}uptime ${uptime_short}
 ]]
