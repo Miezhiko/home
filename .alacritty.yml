@@ -10,7 +10,7 @@ window:
   dynamic_title: true
 
 font:
-  size: 14.0
+  size: 13.0
 
   normal:
     family: Hasklig
