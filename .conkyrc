@@ -62,8 +62,8 @@ conky.text = [[
   ${color}${top name 5}$alignr${top cpu 6}%
   ${color}${top name 5}$alignr${top cpu 7}%
   ${color}${top name 5}$alignr${top cpu 8}%
-  ${color}${top name 5}$alignr${top cpu 9}%
-  ${color}${top name 5}$alignr${top cpu 10}%
+  #${color}${top name 5}$alignr${top cpu 9}%
+  #${color}${top name 5}$alignr${top cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color lightgrey} Top Memory${alignr}Memory    CPU 
   ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
