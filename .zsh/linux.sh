@@ -13,10 +13,6 @@ wupdate() {
   eix-update
 }
 
-wazzup() {
-  eix -I | grep "\[U\]"
-}
-
 watsnew() {
   emerge -avuDN @world --backtrack=100 \
     --with-bdeps=y --quiet-build=n

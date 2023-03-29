@@ -45,7 +45,6 @@ alias gb='git branch'
 alias gd='git diff'
 alias gp='git push'
 
-alias cmake_debug='cmake $1 -DCMAKE_BUILD_TYPE=DEBUG'
 alias cmake_release='cmake $1 -DCMAKE_BUILD_TYPE=RELEASE'
 
 #misc
