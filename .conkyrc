@@ -50,6 +50,8 @@ conky.text = [[
   ${color #FF3333}${swapbar 6,318}
   ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used}${color lightgrey} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
   ${color #FF3333}${fs_bar 6,318 /}
+  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used /data}${color lightgrey} /data ${color}${fs_size /data} ${alignr}${fs_used_perc /data}% Used
+  ${color #FF3333}${fs_bar 6,318 /data}
   ${color lightgrey}Disk Read IO: $color${diskio_read}${alignr}${color lightgrey}Disk Write IO: ${color}${diskio_write}
   ${color #000000}${diskiograph_read 12,145 000000 FF3333}${alignr}${color #000000}${diskiograph_write 12,145 000000 FF3333}
   ${color lightgrey}Processes: ${color}$running_processes${color lightgrey} / ${color}$processes${alignr}${color lightgrey}Threads: ${color}$running_threads${color lightgrey} / ${color}$threads
@@ -59,11 +61,8 @@ conky.text = [[
   ${color}${top name 2}$alignr${top cpu 2}%
   ${color}${top name 3}$alignr${top cpu 3}%
   ${color}${top name 4}$alignr${top cpu 4}%
-  ${color}${top name 5}$alignr${top cpu 6}%
-  ${color}${top name 5}$alignr${top cpu 7}%
-  ${color}${top name 5}$alignr${top cpu 8}%
-  #${color}${top name 5}$alignr${top cpu 9}%
-  #${color}${top name 5}$alignr${top cpu 10}%
+  ${color}${top name 5}$alignr${top cpu 5}%
+  ${color}${top name 6}$alignr${top cpu 6}%
   ${color #656565}$stippled_hr$color
   ${color lightgrey} Top Memory${alignr}Memory    CPU 
   ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
