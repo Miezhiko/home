@@ -27,14 +27,13 @@ tmux_new_session() {
 tmux_restore() {
   tmux start-server
   local count=0
-  local dimensions="$(terminal_size)"
 
   while IFS=$'\t' read session_name window_name dir; do
     if [[ -d "$dir" && $window_name != "log" && $window_name != "man" ]]; then
       if tmux_session_exists "$session_name"; then
         tmux_add_window "$session_name" "$window_name" "$dir"
       else
-        tmux_new_session "$session_name" "$window_name" "$dir" "$dimensions"
+        tmux_new_session "$session_name" "$window_name" "$dir"
         count=$(( count + 1 ))
       fi
     fi
