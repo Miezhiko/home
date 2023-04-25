@@ -63,6 +63,8 @@ conky.text = [[
   ${color}${top name 4}$alignr${top cpu 4}%
   ${color}${top name 5}$alignr${top cpu 5}%
   ${color}${top name 6}$alignr${top cpu 6}%
+  ${color}${top name 7}$alignr${top cpu 7}%
+  ${color}${top name 8}$alignr${top cpu 8}%
   ${color #656565}$stippled_hr$color
   ${color lightgrey} Top Memory${alignr}Memory    CPU 
   ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
@@ -79,8 +81,6 @@ conky.text = [[
   ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
   ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown enp4s0}${alignr}${downspeed enp4s0}
   ${voffset 0}N${color3}${offset 5}Upload${goto 120}${totalup enp4s0}${alignr}${upspeed enp4s0}
-  ${voffset 4}${color6}a${color3}${offset 5}Private${offset 3}IP${goto 123}LAN${alignr}${addr enp4s0}
-  ${voffset 0}${color6}a${color3}${offset 5}Public${offset 7}IP${goto 121}WAN${alignr}${execi 1800 wget -q -O - checkip.dyndns.org | sed -e 's/[^[:digit:]\|.]//g'}
 
   ${color}${kernel}$alignr${color}uptime ${uptime_short}
 ]]
