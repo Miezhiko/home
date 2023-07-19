@@ -3,5 +3,4 @@ export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland
 
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &&
-xrdb -merge .Xresources &&
 dbus-run-session -- gnome-shell --display-server --wayland
