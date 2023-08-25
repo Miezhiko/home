@@ -12,7 +12,7 @@
 !.conkyrc
 
 # shell
-!.alacritty.yml
+!.alacritty.toml
 !.tmux.conf
 !.zshrc
 !.zsh/
