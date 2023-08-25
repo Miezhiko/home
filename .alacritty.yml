@@ -5,7 +5,7 @@ window:
 
   decorations: none
 
-  opacity: .5
+  opacity: .75
 
   dynamic_title: true
 
