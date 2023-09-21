@@ -1,4 +1,7 @@
-reload () { exec "${SHELL}" "$@" }
+reload () {
+  source /etc/profile
+  exec "${SHELL}" "$@"
+}
 
 #There is alias which is using it with noglob
 _calc() { echo "${1}"|bc -l; }
