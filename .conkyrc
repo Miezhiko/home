@@ -50,8 +50,8 @@ conky.text = [[
   ${color #33A3A3}${swapbar 6,318}
   ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used}${color lightgrey} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
   ${color #33A3A3}${fs_bar 6,318 /}
-  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used /data}${color lightgrey} /data ${color}${fs_size /data} ${alignr}${fs_used_perc /data}% Used
-  ${color #33A3A3}${fs_bar 6,318 /data}
+  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used /data2}${color lightgrey} /data2 ${color}${fs_size /data2} ${alignr}${fs_used_perc /data2}% Used
+  ${color #33A3A3}${fs_bar 6,318 /data2}
   ${color lightgrey}Disk Read IO: $color${diskio_read}${alignr}${color lightgrey}Disk Write IO: ${color}${diskio_write}
   ${color #000000}${diskiograph_read 12,145 000000 33A3A3}${alignr}${color #000000}${diskiograph_write 12,145 000000 33A3A3}
   ${color lightgrey}Processes: ${color}$running_processes${color lightgrey} / ${color}$processes${alignr}${color lightgrey}Threads: ${color}$running_threads${color lightgrey} / ${color}$threads
