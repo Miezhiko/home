@@ -1,9 +1,5 @@
 # Asynchronous typing support O_o
-alias gti=git
-alias tgi=git
-alias tig=git
-alias igt=git
-alias itg=git
+alias {gti,tgi,tig,igt,itg}=git
 
 alias sl=ls
 
