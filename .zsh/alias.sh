@@ -24,7 +24,7 @@ fi
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 
-alias l='eza'
+alias l='lsd'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 alias ды='ls'
 
