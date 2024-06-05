@@ -32,31 +32,31 @@ conky.config = {
 conky.text = [[
   ${alignc}${color}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
   ${alignc}${color #000000}${cpugraph 13,318 000000 33A3A3}
-  ${color lightgrey}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color lightgrey}| ${color lightgrey}CPU Temperature: ${color}${hwmon temp 1}°C
+  ${color #C0C0C0}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color #C0C0C0}| ${color #C0C0C0}CPU Temperature: ${color}${hwmon temp 1}°C
 
-  ${color lightgrey}C1: ${color}${cpu cpu1}% ${color lightgrey}@ ${color}${freq 1} MHz${color #33A3A3}${alignr}${color lightgrey}C2: ${color}${cpu cpu2}% ${color lightgrey}@ ${color}${freq 2} MHz   
+  ${color #C0C0C0}C1: ${color}${cpu cpu1}% ${color #C0C0C0}@ ${color}${freq 1} MHz${color #33A3A3}${alignr}${color #C0C0C0}C2: ${color}${cpu cpu2}% ${color #C0C0C0}@ ${color}${freq 2} MHz   
   ${color #33A3A3}${cpubar cpu1 6,150}${alignr}${color #33A3A3}${cpubar cpu2 6,150}
-  ${color lightgrey}C3: ${color}${cpu cpu3}% ${color lightgrey}@ ${color}${freq 3} MHz${color #33A3A3}${alignr}${color lightgrey}C4: ${color}${cpu cpu4}% ${color lightgrey}@ ${color}${freq 4} MHz   
+  ${color #C0C0C0}C3: ${color}${cpu cpu3}% ${color #C0C0C0}@ ${color}${freq 3} MHz${color #33A3A3}${alignr}${color #C0C0C0}C4: ${color}${cpu cpu4}% ${color #C0C0C0}@ ${color}${freq 4} MHz   
   ${color #33A3A3}${cpubar cpu3 6,150}${alignr}${color #33A3A3}${cpubar cpu4 6,150}
-  ${color lightgrey}C5: ${color}${cpu cpu5}% ${color lightgrey}@ ${color}${freq 5} MHz${color #33A3A3}${alignr}${color lightgrey}C6: ${color}${cpu cpu6}% ${color lightgrey}@ ${color}${freq 6} MHz   
+  ${color #C0C0C0}C5: ${color}${cpu cpu5}% ${color #C0C0C0}@ ${color}${freq 5} MHz${color #33A3A3}${alignr}${color #C0C0C0}C6: ${color}${cpu cpu6}% ${color #C0C0C0}@ ${color}${freq 6} MHz   
   ${color #33A3A3}${cpubar cpu5 6,150}${alignr}${color #33A3A3}${cpubar cpu6 6,150}
-  ${color lightgrey}C7: ${color}${cpu cpu7}% ${color lightgrey}@ ${color}${freq 7} MHz${color #33A3A3}${alignr}${color lightgrey}C8: ${color}${cpu cpu8}% ${color lightgrey}@ ${color}${freq 8} MHz   
+  ${color #C0C0C0}C7: ${color}${cpu cpu7}% ${color #C0C0C0}@ ${color}${freq 7} MHz${color #33A3A3}${alignr}${color #C0C0C0}C8: ${color}${cpu cpu8}% ${color #C0C0C0}@ ${color}${freq 8} MHz   
   ${color #33A3A3}${cpubar cpu7 6,150}${alignr}${color #33A3A3}${cpubar cpu8 6,150}
   ${color #656565}$stippled_hr$color
 
-  ${color lightgrey}Ram  ${alignc}               ${color}$mem${color lightgrey} / ${color}$memmax ${alignr}${memperc}% Used
+  ${color #C0C0C0}Ram  ${alignc}               ${color}$mem${color #C0C0C0} / ${color}$memmax ${alignr}${memperc}% Used
   ${color #33A3A3}${membar 6,318}
-  ${color lightgrey}Swap ${alignc}                 ${color}${swap}${color lightgrey} / ${color}${swapmax} ${alignr}${swapperc}% Used
+  ${color #C0C0C0}Swap ${alignc}                 ${color}${swap}${color #C0C0C0} / ${color}${swapmax} ${alignr}${swapperc}% Used
   ${color #33A3A3}${swapbar 6,318}
-  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used}${color lightgrey} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
+  ${color #C0C0C0}$fs_type ${alignc}               ${color}${fs_used}${color #C0C0C0} / ${color}${fs_size} ${alignr}${fs_used_perc /}% Used
   ${color #33A3A3}${fs_bar 6,318 /}
-  ${color lightgrey}$fs_type ${alignc}               ${color}${fs_used /data2}${color lightgrey} /data2 ${color}${fs_size /data2} ${alignr}${fs_used_perc /data2}% Used
+  ${color #C0C0C0}$fs_type ${alignc}               ${color}${fs_used /data2}${color #C0C0C0} /data2 ${color}${fs_size /data2} ${alignr}${fs_used_perc /data2}% Used
   ${color #33A3A3}${fs_bar 6,318 /data2}
-  ${color lightgrey}Disk Read IO: $color${diskio_read}${alignr}${color lightgrey}Disk Write IO: ${color}${diskio_write}
+  ${color #C0C0C0}Disk Read IO: $color${diskio_read}${alignr}${color #C0C0C0}Disk Write IO: ${color}${diskio_write}
   ${color #000000}${diskiograph_read 12,145 000000 33A3A3}${alignr}${color #000000}${diskiograph_write 12,145 000000 33A3A3}
-  ${color lightgrey}Processes: ${color}$running_processes${color lightgrey} / ${color}$processes${alignr}${color lightgrey}Threads: ${color}$running_threads${color lightgrey} / ${color}$threads
+  ${color #C0C0C0}Processes: ${color}$running_processes${color #C0C0C0} / ${color}$processes${alignr}${color #C0C0C0}Threads: ${color}$running_threads${color #C0C0C0} / ${color}$threads
   ${color #656565}$stippled_hr$color
-  ${color lightgrey} Top CPU${alignr}CPU 
+  ${color #C0C0C0} Top CPU${alignr}CPU 
   ${color}${top name 1}$alignr${top cpu 1}%
   ${color}${top name 2}$alignr${top cpu 2}%
   ${color}${top name 3}$alignr${top cpu 3}%
@@ -66,7 +66,7 @@ conky.text = [[
   ${color}${top name 7}$alignr${top cpu 7}%
   ${color}${top name 8}$alignr${top cpu 8}%
   ${color #656565}$stippled_hr$color
-  ${color lightgrey} Top Memory${alignr}Memory    CPU 
+  ${color #C0C0C0} Top Memory${alignr}Memory    CPU 
   ${color}${top_mem name 1}${alignr}${top_mem mem_res 1}$alignr${top_mem cpu 1}%
   ${color}${top_mem name 2}${alignr}${top_mem mem_res 2}$alignr${top_mem cpu 2}%
   ${color}${top_mem name 3}${alignr}${top_mem mem_res 3}$alignr${top_mem cpu 3}%
