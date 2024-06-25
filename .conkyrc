@@ -79,9 +79,9 @@ conky.text = [[
 #  ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker${alignr}USDT
-  ${color}ByBit Bitcoin${alignr}${execi 1000 cat /data2/contrib/haskell/bb/BTCUSDT}
-  ${color}ByBit Etherium${alignr}${execi 1000 cat /data2/contrib/haskell/bb/ETHUSDT}
-  ${color}ByBit Solana${alignr}${execi 1000 cat /data2/contrib/haskell/bb/SOLUSDT}
+  ${color}ByBit Bitcoin${alignr}${cat /data2/contrib/haskell/bb/BTCUSDT}
+  ${color}ByBit Etherium${alignr}${cat /data2/contrib/haskell/bb/ETHUSDT}
+  ${color}ByBit Solana${alignr}${cat /data2/contrib/haskell/bb/SOLUSDT}
 
   ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
   ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown enp4s0}${alignr}${downspeed enp4s0}
