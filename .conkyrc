@@ -80,9 +80,9 @@ conky.text = [[
   ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker USDT${alignr}Graph 
-  ${color}BTC ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/BTCUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/BTCUSDT | awk '{print (substr($0,2) - 58000) / 100}'" 17,210 C0C0C0 EAEAEA -lt}
-  ${color}ETH ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/ETHUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/ETHUSDT | awk '{print (substr($0,2) - 2700) / 18}'" 17,210 C0C0C0 EAEAEA -lt}
-  ${color}SOL ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/SOLUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/SOLUSDT | awk '{print (substr($0,2) - 125) * 1.5}'" 17,210 C0C0C0 EAEAEA -lt}
+  ${color}BTC ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/BTCUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/BTCUSDT | awk '{print (substr($0,2) - 61000) / 10}'" 17,210 C0C0C0 EAEAEA -lt}
+  ${color}ETH ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/ETHUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/ETHUSDT | awk '{print (substr($0,2) - 3300) / 4}'" 17,210 C0C0C0 EAEAEA -lt}
+  ${color}SOL ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/SOLUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/SOLUSDT | awk '{print (substr($0,2) - 130) * 2}'" 17,210 C0C0C0 EAEAEA -lt}
   ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
   ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown enp4s0}${alignr}${downspeed enp4s0}
   ${voffset 0}N${color3}${offset 5}Upload${goto 120}${totalup enp4s0}${alignr}${upspeed enp4s0}
