@@ -27,7 +27,9 @@ conky.config = {
   gap_y = 10,
   use_spacer = 'left',
   no_buffers = true,
-  uppercase = false
+  uppercase = false,
+  show_graph_range = false,
+  show_graph_scale = false
 }
 
 conky.text = [[
@@ -61,8 +63,8 @@ conky.text = [[
   ${color}${top name 1}$alignr${top cpu 1}%
   ${color}${top name 2}$alignr${top cpu 2}%
   ${color}${top name 3}$alignr${top cpu 3}%
-  ${color}${top name 4}$alignr${top cpu 4}%
-  ${color}${top name 5}$alignr${top cpu 5}%
+#  ${color}${top name 4}$alignr${top cpu 4}%
+#  ${color}${top name 5}$alignr${top cpu 5}%
 #  ${color}${top name 6}$alignr${top cpu 6}%
 #  ${color}${top name 7}$alignr${top cpu 7}%
 #  ${color}${top name 8}$alignr${top cpu 8}%
@@ -80,9 +82,11 @@ conky.text = [[
   ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker USDT${alignr}Graph 
-  ${color}BTC ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/BTCUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/BTCUSDT_GRAPH" 17,210 C0C0C0 EAEAEA -lt}
-  ${color}ETH ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/ETHUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/ETHUSDT_GRAPH" 17,210 C0C0C0 EAEAEA -lt}
-  ${color}SOL ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/SOLUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/SOLUSDT_GRAPH" 17,210 C0C0C0 EAEAEA -lt}
+  ${color}BTC ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/BTCUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/BTCUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}ETH ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/ETHUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/ETHUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}SOL ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/SOLUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/SOLUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}ADA ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/ADAUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/ADAUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}DOT ${alignr}${color}${execpi 30 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/DOTUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "cat /data2/contrib/haskell/bb/conky/DOTUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
   ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
   ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown enp4s0}${alignr}${downspeed enp4s0}
   ${voffset 0}N${color3}${offset 5}Upload${goto 120}${totalup enp4s0}${alignr}${upspeed enp4s0}
