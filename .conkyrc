@@ -75,10 +75,10 @@ conky.text = [[
   ${color}${top_mem name 3}${alignr}${top_mem mem_res 3}$alignr${top_mem cpu 3}%
   ${color}${top_mem name 4}${alignr}${top_mem mem_res 4}$alignr${top_mem cpu 4}%
   ${color}${top_mem name 5}${alignr}${top_mem mem_res 5}$alignr${top_mem cpu 5}%
-  ${color}${top_mem name 6}${alignr}${top_mem mem_res 6}$alignr${top_mem cpu 6}%
-  ${color}${top_mem name 7}${alignr}${top_mem mem_res 7}$alignr${top_mem cpu 7}%
-  ${color}${top_mem name 8}${alignr}${top_mem mem_res 8}$alignr${top_mem cpu 8}%
-  ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
+#  ${color}${top_mem name 6}${alignr}${top_mem mem_res 6}$alignr${top_mem cpu 6}%
+#  ${color}${top_mem name 7}${alignr}${top_mem mem_res 7}$alignr${top_mem cpu 7}%
+#  ${color}${top_mem name 8}${alignr}${top_mem mem_res 8}$alignr${top_mem cpu 8}%
+#  ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
 #  ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker USDT${alignr}Graph 
@@ -88,6 +88,10 @@ conky.text = [[
   ${color}ADA ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/ADAUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/ADAUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
   ${color}DOT ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/DOTUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/DOTUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
   ${color}TON ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/TONUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/TONUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}XRP ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/XRPUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/XRPUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}TRX ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/TRXUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/TRXUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}WIF ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/WIFUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/WIFUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
+  ${color}PE ${alignr}${color}${execpi 1 grep -oP '(?<=^)[+-]?\d*\.?\d+' /data2/contrib/haskell/bb/conky/1000PEPEUSDT | awk '{print $1 < 0 ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" substr($0, 2)}'} ${color}${execgraph "awk '{print $1}' /data2/contrib/haskell/bb/conky/1000PEPEUSDT_GRAPH" 17,210 C0C0C0 C0C0C0 -lt}
   ${voffset 4}${color4}NETWORK${offset 8}${color8}${voffset -2}${hr 2}
   ${voffset 4}${color6}T${color3}${offset 5}Download${goto 120}${totaldown enp4s0}${alignr}${downspeed enp4s0}
   ${voffset 0}N${color3}${offset 5}Upload${goto 120}${totalup enp4s0}${alignr}${upspeed enp4s0}
