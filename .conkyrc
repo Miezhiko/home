@@ -78,8 +78,8 @@ conky.text = [[
   ${color}${top_mem name 6}${alignr}${top_mem mem_res 6}$alignr${top_mem cpu 6}%
   ${color}${top_mem name 7}${alignr}${top_mem mem_res 7}$alignr${top_mem cpu 7}%
   ${color}${top_mem name 8}${alignr}${top_mem mem_res 8}$alignr${top_mem cpu 8}%
-#  ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
-#  ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
+  ${color}${top_mem name 9}${alignr}${top_mem mem_res 9}$alignr${top_mem cpu 9}%
+  ${color}${top_mem name 10}${alignr}${top_mem mem_res 10}$alignr${top_mem cpu 10}%
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker USDT${alignr}Graph 
   ${color}BTC ${alignr}${color}${execpi 1 hodl BTCUSDT | grep -oP '(?<=^)-?\d*\.?\d{2}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl BTCUSDT_GRAPH" 17,210 C0C0C0 33A3A3 -lt}
