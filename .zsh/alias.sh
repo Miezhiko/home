@@ -40,6 +40,7 @@ alias gb='git branch'
 alias gd='git diff'
 alias gp='git push'
 alias ga='git add'
+alias пд='git pull'
 
 alias s='subete'
 
