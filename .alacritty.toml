@@ -22,7 +22,7 @@ key = "PageDown"
 mode = "~Alt"
 mods = "Shift"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
