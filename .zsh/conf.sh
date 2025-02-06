@@ -132,4 +132,4 @@ export NODE_PATH=/usr/lib64/node_modules
 export NO_AT_BRIDGE=1
 export QT_PLATFORMTHEME=gtk3
 export QT_QPA_PLATFORMTHEME=gtk3
-
+export GTK_USE_PORTAL=0
