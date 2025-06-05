@@ -89,7 +89,7 @@ ${color}ETH${alignr}${color}${execpi 1 hodl ETHUSDT| grep -oP '(?<=^)-?\d*\.?\d{
 ${color}ADA${alignr}${color}${execpi 1 hodl ADAUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ADAUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
 ${color}JUP${alignr}${color}${execpi 1 hodl JUPUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl JUPUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
 ${color}DOT${alignr}${color}${execpi 1 hodl DOTUSDT| grep -oP '(?<=^)-?\d*\.?\d{5}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl DOTUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}ACT${alignr}${color}${execpi 1 hodl ACTUSDT| grep -oP '(?<=^)-?\d*\.?\d{6}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ACTUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+${color}APT${alignr}${color}${execpi 1 hodl APTUSDT| grep -oP '(?<=^)-?\d*\.?\d{6}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl APTUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
 
   ${color}${kernel}$alignr${color}uptime ${uptime_short}
 ]]
