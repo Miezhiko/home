@@ -1,0 +1,41 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "agent": {
+    "model_parameters": [],
+    "default_model": {
+      "provider": "ollama",
+      "model": "deepseek-r1:latest"
+    },
+    "version": "2"
+  },
+  "languages": {
+    "Haskell": {
+      "formatter": {
+        "external": {
+          "command": "stylish-haskell",
+          "arguments": ["{buffer_path}"]
+        }
+      }
+    }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
+  "ui_font_family": "Hasklig",
+  "buffer_font_family": "Hasklig",
+  "theme": {
+    "mode": "system",
+    "light": "One Dark",
+    "dark": "One Dark"
+  }
+}
