@@ -1,4 +1,5 @@
 {
+  "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -21,12 +22,14 @@
   },
   "languages": {
     "Haskell": {
+      "tab_size": 2
+      /*
       "formatter": {
         "external": {
           "command": "stylish-haskell",
           "arguments": ["{buffer_path}"]
         }
-      }
+      }*/
     }
   },
   "telemetry": {

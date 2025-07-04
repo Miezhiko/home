@@ -1,0 +1,23 @@
+binds {
+  Mod+T { spawn "alacritty"; }
+  Mod+P { spawn "fuzzel"; }
+  Mod+A { focus-column-left; }
+  Mod+S { focus-window-or-workspace-down; }
+  Mod+W { focus-window-or-workspace-up; }
+  Mod+D { focus-column-right; }
+  Mod+E { toggle-overview; }
+}
+
+layout {
+  default-column-width { proportion 1.0; }
+  background-color "transparent"
+}
+
+layer-rule {
+  match namespace="^wallpaper$"
+  place-within-backdrop true
+}
+
+spawn-at-startup "mako"
+spawn-at-startup "xwayland-satellite"
+
