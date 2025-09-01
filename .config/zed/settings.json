@@ -7,9 +7,8 @@
     "model_parameters": [],
     "default_model": {
       "provider": "ollama",
-      "model": "deepseek-r1:latest"
+      "model": "qwen2.5-coder:latest"
     },
-    "version": "2"
   },
   "settings": {
     "minimap": true
@@ -21,6 +20,10 @@
     "current_line_highlight": "line"
   },
   "languages": {
+    "Rust": {
+      "show_edit_predictions": false,
+      "tab_size": 2
+    },
     "Haskell": {
       "tab_size": 2
       /*
@@ -43,6 +46,6 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "Miezhiko theme"
+    "dark": "Miezhiko Dark"
   }
 }
