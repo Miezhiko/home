@@ -37,3 +37,7 @@ GOAWAYFROMSWAPYOUASSHOLES() {
   swapon -a
   free
 }
+
+if [ -d "/data/platform-tools" ] ; then
+    PATH="/data/platform-tools:$PATH"
+fi

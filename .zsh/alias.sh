@@ -27,7 +27,7 @@ alias ды='ls'
 #editors
 alias nano='nano --zero'
 alias n='nano --zero'
-alias g='gnome-text-editor "$@" 2>/dev/null'
+alias g='gedit "$@" 2>/dev/null'
 alias z='zed'
 
 #because of zsh...
