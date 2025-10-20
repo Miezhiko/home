@@ -14,6 +14,7 @@
 # shell
 !.alacritty.toml
 !.tmux.conf
+!.nanorc
 !.zshrc
 !.zsh/
 !.zsh/*

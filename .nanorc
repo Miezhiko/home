@@ -1,0 +1,10 @@
+syntax "sh" "\.sh$" "\.bash$" "bashrc$" "bash_profile$"
+header "^#!.*/(env +)?(ba|k|pdk)?sh[-0-9_]*( |$)"
+
+color brightcyan "#.*"
+color green "\(" "\)" "\{" "\}"
+color red "\<[A-Z_]{2,}\>"
+color red "[\$\*\'\`\|\=]"
+color blue "\[.*\]"
+color magenta "\<-e\>" "\<-d\>" "\<-f\>" "\<-r\>" "\<-g\>" "\<-u\>" "\<-u\>" "\<-w\>" "\<-x\>" "\<-L\>"
+color magenta "\<-eq\>" "\<-ne\>" "\<-gt\>" "\<-lt\>" "\<-ge\>" "\<-le\>" "\<-s\>" "\<-n\>" "\<-z\>"
