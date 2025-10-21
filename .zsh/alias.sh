@@ -10,6 +10,7 @@ alias du='du -sh'
 
 alias chmod="chmod -c"
 alias chown="chown -c"
+alias sudo="sudo -E"
 
 if which colordiff > /dev/null 2>&1; then
   alias diff="colordiff -Nuar"
