@@ -119,7 +119,7 @@ build_prompt() {
 [[ -z $precmd_functions ]] && precmd_functions=()
 precmd_functions=($precmd_functions build_prompt)
 
-RPROMPT="%{$fg[magenta]%}%D{%H:%M:%S} %{$fg[cyan]%}%n%{$fg[default]%}⋆%{%(#~$fg_bold[blue]~$fg_bold[magenta])%}%m %{$fg_bold[default]%}%~/ %{$reset_color%}% %(?,%{$fg[green]%}Π%{$reset_color%},%{$fg_bold[red]%}∅%{$reset_color%}"
+RPROMPT="%{$fg[bright-magenta]%}%D{%H:%M:%S} %{$fg[bright-cyan]%}%n%{$fg[default]%}⋆%{%(#~$fg_bold[blue]~$fg_bold[bright-magenta])%}%m %{$fg_bold[default]%}%~/ %{$reset_color%}% %(?,%{$fg[green]%}Π%{$reset_color%},%{$fg_bold[red]%}∅%{$reset_color%}"
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
