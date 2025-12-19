@@ -119,10 +119,10 @@ build_prompt() {
 [[ -z $precmd_functions ]] && precmd_functions=()
 precmd_functions=($precmd_functions build_prompt)
 
-RPROMPT="%F{203}%D{%H:%M:%S} %F{109}%n%{$fg[default]%}⋆%(#~%F{blue}~%F{203})%m %{$fg_bold[default]%}%~/ %{$reset_color%}%(?,%F{108}Π%{$reset_color%},%F{167}∅%{$reset_color%})"
-
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
+
+RPROMPT="%F{203}%D{%H:%M:%S}%f %F{109}%n%f%{$fg[default]%}⋆%F{203}%m%f %{$fg_bold[default]%}%~/%f %{$reset_color%}%(?,%F{108}Π%f,%F{167}∅%f)"
 
 # Shell config.
 export EDITOR="nano"
