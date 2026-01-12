@@ -83,13 +83,13 @@ conky.text = [[
   ${color #656565}$stippled_hr$color
   ${color #C0C0C0} Ticker USDT${alignr}Graph 
 
-${color}BTC${alignr}${color}${execpi 1 hodl BTCUSDT| grep -oP '(?<=^)-?\d*\.?\d{2}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl BTCUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}SOL${alignr}${color}${execpi 1 hodl SOLUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl SOLUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}ETH${alignr}${color}${execpi 1 hodl ETHUSDT| grep -oP '(?<=^)-?\d*\.?\d{2}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ETHUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}ADA${alignr}${color}${execpi 1 hodl ADAUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ADAUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}ARB${alignr}${color}${execpi 1 hodl ARBUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ARBUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}BNB${alignr}${color}${execpi 1 hodl BNBUSDT| grep -oP '(?<=^)-?\d*\.?\d{3}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl BNBUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
-${color}HYPE${alignr}${color}${execpi 1 hodl HYPEUSDT| grep -oP '(?<=^)-?\d*\.?\d{3}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl HYPEUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}BTC${alignr}${color}${execpi 1 hodl BTCUSDT| grep -oP '(?<=^)-?\d*\.?\d{2}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl BTCUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}SOL${alignr}${color}${execpi 1 hodl SOLUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl SOLUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}ETH${alignr}${color}${execpi 1 hodl ETHUSDT| grep -oP '(?<=^)-?\d*\.?\d{2}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ETHUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}ADA${alignr}${color}${execpi 1 hodl ADAUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ADAUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}ARB${alignr}${color}${execpi 1 hodl ARBUSDT| grep -oP '(?<=^)-?\d*\.?\d{4}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl ARBUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}BNB${alignr}${color}${execpi 1 hodl BNBUSDT| grep -oP '(?<=^)-?\d*\.?\d{3}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl BNBUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
+  ${color}HYPE${alignr}${color}${execpi 1 hodl HYPEUSDT| grep -oP '(?<=^)-?\d*\.?\d{3}' | awk '{print $1 ~ /^-/ ? "${color FF9999}" substr($0, 2) : "${color 99FF99}" $0}'} ${color}${execgraph "hodl HYPEUSDT_GRAPH" 17,210 000000 33A3A3 -lt}
 
   ${color}${kernel}$alignr${color}uptime ${uptime_short}
 ]]
