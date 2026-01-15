@@ -70,3 +70,33 @@ stopwatch() {
         sleep 0.1
     done
 }
+
+function forget() {
+    # Remove this command from history immediately
+    local histno=$HISTCMD
+    
+    local input="$1"
+    
+    if [[ -z "$input" ]]; then
+        input=1
+    fi
+    
+    fc -W  # Write current history (includes this forget command)
+    
+    if [[ "$input" =~ ^[0-9]+$ ]]; then
+        # Remove last N + this forget command
+        local N=$((input + 1))
+        head -n -$N "$HISTFILE" > "$HISTFILE.tmp" && mv "$HISTFILE.tmp" "$HISTFILE"
+    else
+
+        # Remove lines with string + this forget command
+        grep -a -v "$input" "$HISTFILE" > "$HISTFILE.tmp" && mv "$HISTFILE.tmp" "$HISTFILE"
+        head -n -1 "$HISTFILE" > "$HISTFILE.tmp" && mv "$HISTFILE.tmp" "$HISTFILE"
+    fi
+    
+    fc -R
+    
+    # Clear this command from the in-memory history
+    print -s ""  # This tricks zsh
+    fc -p
+}
