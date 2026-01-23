@@ -13,13 +13,13 @@ wupdate() {
 }
 
 watsnew() {
-  emerge -avuDN @world --exclude=nvidia-drviers --backtrack=100 \
+  emerge -avuDN @world --exclude=nvidia-drivers --backtrack=100 \
     --with-bdeps=y --quiet-build=n
 }
 
 wupgrade() {
   wupdate
-  emerge -vuDN @world --exclude=nvidia-drviers --backtrack=100 \
+  emerge -vuDN @world --exclude=nvidia-drivers --backtrack=100 \
     --keep-going --with-bdeps=y --quiet-build=n
   emerge @smart-live-rebuild --keep-going
   haskell-updater
