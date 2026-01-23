@@ -4,7 +4,6 @@ if [[ $UID == 0 || $EUID == 0 ]]; then
   ulimit -Sn 10000
 fi
 
-# Distribution packages
 wupdate() {
   shelter
   emerge --sync
@@ -14,13 +13,13 @@ wupdate() {
 }
 
 watsnew() {
-  emerge -avuDN @world --backtrack=100 \
+  emerge -avuDN @world --exclude=nvidia-drviers --backtrack=100 \
     --with-bdeps=y --quiet-build=n
 }
 
 wupgrade() {
   wupdate
-  emerge -vuDN @world --backtrack=100 \
+  emerge -vuDN @world --exclude=nvidia-drviers --backtrack=100 \
     --keep-going --with-bdeps=y --quiet-build=n
   emerge @smart-live-rebuild --keep-going
   haskell-updater
