@@ -130,7 +130,5 @@ export LD_LIBRARY_PATH=/usr/local/lib64
 export force_3tc_enable=true
 export NODE_PATH=/usr/lib64/node_modules
 export NO_AT_BRIDGE=1
-export QT_PLATFORMTHEME=gtk3
-export QT_QPA_PLATFORMTHEME=gtk3
 export GTK_USE_PORTAL=0
 export ZED_ALLOW_ROOT=true
