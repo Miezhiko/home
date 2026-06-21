@@ -132,3 +132,4 @@ export NODE_PATH=/usr/lib64/node_modules
 export NO_AT_BRIDGE=1
 export GTK_USE_PORTAL=0
 export ZED_ALLOW_ROOT=true
+QT_WAYLAND_DECORATION=adwaita
