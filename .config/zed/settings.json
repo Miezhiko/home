@@ -1,9 +1,22 @@
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "dock": "right",
     "model_parameters": [],
     "default_model": {
       "provider": "ollama",
@@ -46,6 +59,6 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "Miezhiko Dark"
+    "dark": "Ayu Mirage"
   }
 }
