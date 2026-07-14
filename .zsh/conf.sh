@@ -124,6 +124,23 @@ zle -N self-insert url-quote-magic
 
 RPROMPT="%F{203}%D{%H:%M:%S}%f %F{109}%n%f%{$fg[default]%}⋆%F{203}%m%f %{$fg_bold[default]%}%~/%f %{$reset_color%}%(?,%F{108}Π%f,%F{167}∅%f)"
 
+# Proxy from Gnome
+if command -v gsettings >/dev/null; then
+  mode=$(gsettings get org.gnome.system.proxy mode | tr -d "'")
+  if [ "$mode" = "manual" ]; then
+    host=$(gsettings get org.gnome.system.proxy.http host | tr -d "'")
+    port=$(gsettings get org.gnome.system.proxy.http port)
+    if [ -n "$host" ] && [ "$port" != "0" ]; then
+      export http_proxy="http://$host:$port/"
+      export https_proxy="$http_proxy"
+      export HTTP_PROXY="$http_proxy"
+      export HTTPS_PROXY="$http_proxy"
+      export no_proxy="localhost,127.0.0.1,::1"
+      export NO_PROXY="$no_proxy"
+    fi
+  fi
+fi
+
 # Shell config.
 export EDITOR="nano"
 export LD_LIBRARY_PATH=/usr/local/lib64
