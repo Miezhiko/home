@@ -1,4 +1,22 @@
 {
+  "agent": {
+    "dock": "right",
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "proxy": "",
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "project_panel": {
     "dock": "left"
   },
@@ -12,20 +30,6 @@
     "dock": "left"
   },
   "show_edit_predictions": false,
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
-  "agent": {
-    "dock": "right",
-    "model_parameters": [],
-    "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:latest"
-    },
-  },
-  "settings": {
-    "minimap": true
-  },
   "minimap": {
     "show": "always",
     "thumb": "always",
@@ -37,16 +41,6 @@
       "show_edit_predictions": false,
       "tab_size": 2
     },
-    "Haskell": {
-      "tab_size": 2
-      /*
-      "formatter": {
-        "external": {
-          "command": "stylish-haskell",
-          "arguments": ["{buffer_path}"]
-        }
-      }*/
-    }
   },
   "telemetry": {
     "diagnostics": false,
@@ -59,6 +53,6 @@
   "theme": {
     "mode": "dark",
     "light": "One Dark",
-    "dark": "Ayu Mirage"
+    "dark": "One Dark"
   }
 }
