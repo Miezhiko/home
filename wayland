@@ -3,4 +3,8 @@ export GDK_BACKEND=wayland
 export QT_QPA_PLATFORM=wayland
 
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &&
-dbus-run-session -- gnome-shell --display-server --wayland
+dbus-run-session -- sh -c '
+  /usr/libexec/gsd-rfkill &
+  /usr/libexec/gsd-media-keys &
+  exec gnome-shell --display-server --wayland
+'
