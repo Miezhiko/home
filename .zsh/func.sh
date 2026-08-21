@@ -101,26 +101,31 @@ function forget() {
     fc -p
 }
 
-export PROXY_HOST="127.0.0.1"
-export PROXY_PORT="12334"
-
 function proxify() {
-    #gsettings set org.gnome.system.proxy mode 'manual'
-    #gsettings set org.gnome.system.proxy.http host '127.0.0.1'
-    #gsettings set org.gnome.system.proxy.http port 12334
-    #gsettings set org.gnome.system.proxy.https host '127.0.0.1'
-    #gsettings set org.gnome.system.proxy.https port 12334
-    #gsettings set org.gnome.system.proxy.ftp host '127.0.0.1'
-    #gsettings set org.gnome.system.proxy.ftp port 12334
-    export http_proxy="http://$PROXY_HOST:$PROXY_PORT"
-    export https_proxy="http://$PROXY_HOST:$PROXY_PORT"
-    export ftp_proxy="http://$PROXY_HOST:$PROXY_PORT"
-    export all_proxy="socks5://$PROXY_HOST:$PROXY_PORT"
+    if command -v gsettings &>/dev/null; then
+        local proxy_mode=$(gsettings get org.gnome.system.proxy mode 2>/dev/null | tr -d "'")
+        if [[ "$proxy_mode" == "manual" ]]; then
+            local proxy_host=$(gsettings get org.gnome.system.proxy.http host 2>/dev/null | tr -d "'")
+            local proxy_port=$(gsettings get org.gnome.system.proxy.http port 2>/dev/null)
+            if [[ -n "$proxy_host" && -n "$proxy_port" ]]; then
+                export http_proxy="http://${proxy_host}:${proxy_port}"
+                export https_proxy="http://${proxy_host}:${proxy_port}"
+                export HTTP_PROXY="http://${proxy_host}:${proxy_port}"
+                export HTTPS_PROXY="http://${proxy_host}:${proxy_port}"
+                export no_proxy="localhost,127.0.0.1,::1"
+                export NO_PROXY="localhost,127.0.0.1,::1"
+                echo "✅ Proxy detected from GNOME: ${proxy_host}:${proxy_port}"
+                return 0
+            fi
+        fi
+    fi
+    
+    # Fallback
+    export http_proxy="http://127.0.0.1:12334"
+    export https_proxy="http://127.0.0.1:12334"
+    export HTTP_PROXY="http://127.0.0.1:12334"
+    export HTTPS_PROXY="http://127.0.0.1:12334"
     export no_proxy="localhost,127.0.0.1,::1"
-    export HTTP_PROXY="http://$PROXY_HOST:$PROXY_PORT"
-    export HTTPS_PROXY="http://$PROXY_HOST:$PROXY_PORT"
-    export FTP_PROXY="http://$PROXY_HOST:$PROXY_PORT"
-    export ALL_PROXY="socks5://$PROXY_HOST:$PROXY_PORT"
     export NO_PROXY="localhost,127.0.0.1,::1"
-    echo "✅ Proxy enabled on $PROXY_HOST:$PROXY_PORT"
+    echo "✅ Using manual proxy: 127.0.0.1:12334"
 }
