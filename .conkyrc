@@ -35,7 +35,7 @@ conky.config = {
 conky.text = [[
   ${alignc}${color}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}
   ${alignc}${color #000000}${cpugraph 13,318 000000 33A3A3}
-  ${color #C0C0C0}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color #C0C0C0}| ${color #C0C0C0}CPU Temperature: ${color}${hwmon temp 1}°C
+  ${color #C0C0C0}Total CPU Usage: ${color}${cpu cpu0}%${alignr}${color #C0C0C0}| ${color #C0C0C0}CPU Temperature: ${color}${execi 2 sensors coretemp-isa-0000 | grep 'Package id 0' | grep -oP '\+\K[0-9.]+(?=°C)' | head -1}°C
 
   ${color #C0C0C0}C1: ${color}${cpu cpu1}% ${color #C0C0C0}@ ${color}${freq 1} MHz${color #33A3A3}${alignr}${color #C0C0C0}C2: ${color}${cpu cpu2}% ${color #C0C0C0}@ ${color}${freq 2} MHz   
   ${color #33A3A3}${cpubar cpu1 6,150}${alignr}${color #33A3A3}${cpubar cpu2 6,150}
