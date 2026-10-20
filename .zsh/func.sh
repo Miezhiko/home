@@ -129,3 +129,24 @@ function proxify() {
     export NO_PROXY="localhost,127.0.0.1,::1"
     echo "✅ Using manual proxy: 127.0.0.1:12334"
 }
+
+function proxify_external() {
+    local proxy_port=12334
+    if command -v gsettings &>/dev/null; then
+        local proxy_mode=$(gsettings get org.gnome.system.proxy mode 2>/dev/null | tr -d "'")
+        if [[ "$proxy_mode" == "manual" ]]; then
+            local gnome_port=$(gsettings get org.gnome.system.proxy.http port 2>/dev/null)
+            if [[ -n "$gnome_port" && "$gnome_port" != "0" ]]; then
+                proxy_port="$gnome_port"
+            fi
+        fi
+    fi
+
+    export http_proxy="http://192.168.1.100:${proxy_port}"
+    export https_proxy="http://192.168.1.100:${proxy_port}"
+    export HTTP_PROXY="http://192.168.1.100:${proxy_port}"
+    export HTTPS_PROXY="http://192.168.1.100:${proxy_port}"
+    export no_proxy="localhost,127.0.0.1,::1"
+    export NO_PROXY="localhost,127.0.0.1,::1"
+    echo "✅ Using external proxy: 192.168.1.100:${proxy_port}"
+}
